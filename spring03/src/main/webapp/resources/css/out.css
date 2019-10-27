@@ -1,0 +1,13 @@
+@charset "EUC-KR";
+input{
+	background: yellow;	
+	
+	
+}
+#id{
+	color: blue;
+}
+
+.in{
+	border: 2px dotted red;
+}
