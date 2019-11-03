@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="book">
+
+	<select id="selectOne" parameterType="bookDTO" resultMap="map">
+		SELECT * FROM bookmark
+		WHERE id = #{id}
+	</select>
+
+	<resultMap type="bookDTO" id="map">
+		<result property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="site" column="site" />
+	</resultMap>
+
+	<select id="selectAll" resultMap="map">
+		SELECT * FROM bookmark
+	</select>
+
+	<insert id="insert" parameterType="bookDto">
+		INSERT INTO bookmark VALUES(#{id},#{name},#{site}) 
+	</insert>
+
+	 <update id="update" parameterType="bookDTO">
+		UPDATE bookmark
+		SET
+		name #{name}
+		WHERE
+		id = #{id}
+	</update>
+
+	<delete id="delete" parameterType="bookDTO">
+		DELETE FROM bookmark WHERE
+		id = #{id}
+	</delete>
+
+</mapper>
