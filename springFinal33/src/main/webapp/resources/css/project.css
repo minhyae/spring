@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+td {
+	font-size: 20px;
+	text-align: center;
+}
+
+#content {
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+input {
+	color: blue;
+	font: 30px 궁서 bold;
+}
+body{
+	font:25px 궁서 bold;
+}
+
+button{
+	color:red;
+	font: 30px 궁서 bold;
+	background: yellow;
+}
+#top2 {
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	/* background-image: url(../img/001.png); */
+	width: 250px;
+	height: 100px;
+	background: black;
+	font: 20px 궁서 bold;
+	color: yellow;
+	border-radius: 100px 20px;
+	box-shadow: 10px 10px yellow;
+	border-top: 5px solid aqua;
+	border-bottom: 10px double white;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	font: 30px 굴림 bold italic;
+}
+
+#top li:first-child {
+	border-radius: 20px 0 0 20px;
+}
+
+#top li:last-child {
+	border-radius: 0 20px 20px 0;
+}
+
+#top li {
+	list-style: none;
+	float: left;
+	padding: 15px;
+}
+
+#top li:nth-child(2n) {
+	background: orange;
+}
+
+#top li:nth-child(2n+1) {
+	background: red;
+}
+
+#total {
+	background-image: url(../img/0002.png);
+	height: 800px;
+	width: 800px;
+}
+
+#top {
+	padding-top: 5px;
+	width: 800px;
+	height: 100px;
+	background: lime;
+	width: 800px;
+}
