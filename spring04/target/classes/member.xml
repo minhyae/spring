@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member">
+
+<!-- 	<resultMap type="memberDTO" id="map2">
+		<id property="id" column="id" />
+		<result property="pw" column="pw" />
+		<result property="name" column="name" />
+		<result property="tel" column="tel" />
+	</resultMap> -->
+
+	<select id="select" parameterType="memberDTO" >
+		SELECT *
+		FROM member where id = #{id}
+	</select>
+
+	<insert id="insert" parameterType="memberDTO">
+		insert into member values
+		(#{id},#{pw},#{name},#{tel})
+	</insert>
+</mapper>

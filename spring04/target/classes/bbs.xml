@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="bbs">
+
+	<resultMap type="BbsDTO" id="map1">
+		<id property="id" column="id" />
+		<result property="title" column="title" />
+		<result property="content" column="content" />
+		<result property="writer" column="writer" />
+	</resultMap>
+
+	<select id="select" parameterType="BbsDTO" resultMap="map1">
+		SELECT * FROM bbs
+		where id = #{id}
+	</select>
+
+	<select id="selectAll" resultMap="map1">
+		select * from bbs
+	</select>
+	
+	<insert id="insert" parameterType="bbsDTO">
+		insert into bbs values
+		(#{id},#{pw},#{name},#{tel})
+	</insert>
+</mapper>

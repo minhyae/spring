@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="product">
+
+	<resultMap type="ProductDTO" id="map2">
+		<id property="id" column="id" />
+		<result property="title" column="title" />
+		<result property="content" column="content" />
+		<result property="price" column="price" />
+		<result property="img" column="img" />
+	</resultMap>
+
+	<select id="select2" parameterType="ProductDTO" resultMap="map2">
+		SELECT * FROM product
+		where id = #{id}
+	</select>
+
+	<select id="selectAll2" resultMap="map2">
+		select * from product
+	</select>
+	
+
+</mapper>

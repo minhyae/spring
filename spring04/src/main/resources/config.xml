@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.kgitbank.mvc04.MemberDTO" alias="memberDTO"></typeAlias>
+		<typeAlias type="com.kgitbank.mvc04.BbsDTO" alias="bbsDTO"></typeAlias>
+		<typeAlias type="com.kgitbank.mvc04.ProductDTO" alias="ProductDTO"></typeAlias>
+		<typeAlias type="com.kgitbank.mvc04.ReplyDTO" alias="ReplyDTO"></typeAlias>
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="member.xml" />
+		<mapper resource="bbs.xml" />
+		<mapper resource="product.xml" />
+		<mapper resource="reply.xml" />
+	</mappers>
+	
+</configuration>

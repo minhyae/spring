@@ -22,9 +22,10 @@
 	</script>
 </head>
 <body>
+<img src="resources/img/001.png">
 <input type ="button" class="btn1" value="이미지 추가">
 <input type ="button" class="btn2" value="텍스트 추가"><br>
-
+<img src="resources/img/goldenretriever.jpg">
 <div class="d1"></div>
 </body>
 </html>
